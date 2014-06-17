@@ -1,5 +1,4 @@
-require "rubygems"
-require "prawn"
+require 'prawn'
 
 Prawn::Document.generate("hello.pdf") do
   text "Hello World!"
