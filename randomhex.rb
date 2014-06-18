@@ -15,8 +15,7 @@ Prawn::Document.generate "hellohex.pdf" do |pdf|
   pdf.text "int a = orig | (insert<<8)"
   
 Prawn::Document.generate("test.pdf") do |pdf|
-    table_data = [["a=?\n int orig = #{a}\n int insert = #{b}\n int a = orig | (insert<<8)"], 
-                  ["<b>2. Row example text</b>", "<b>2343</b>"]]
+    table_data = [["a=?\n int orig = #{a}\n int insert = #{b}\n int a = orig | (insert<<8)", "b=?\n int orig = #{a}\n int insert = #{b}\n int a = orig | (insert<<6)"]]
 
     pdf.table(table_data, :width => 500, :cell_style => { :inline_format => true })
 end
