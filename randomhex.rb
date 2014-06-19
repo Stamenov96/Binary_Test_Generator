@@ -3,6 +3,7 @@ require 'securerandom'
 require 'prawn'
 
 
+
 a=SecureRandom.hex(2)
 b=SecureRandom.hex(2)
 #p a.hex.to_s(2)
@@ -16,6 +17,9 @@ i=rand(1000)
 j=rand(10000)
 
 Prawn::Document.generate("test.pdf") do |pdf|
+	
+	pdf.text "Технологично Училище Електронни Системи",:font=> "Verdana"
+
     table_data = [
     ["a=?\n int orig = #{a}\n int insert = #{b}\n int a = orig | (insert      8)",
      "b=?\n int orig = #{a}\n int insert = #{b}\n int a = orig | (insert      6)"],
