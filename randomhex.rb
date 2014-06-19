@@ -18,8 +18,7 @@ j=rand(10000)
 
 Prawn::Document.generate("test.pdf") do |pdf|
 	
-	pdf.text "Технологично Училище Електронни Системи",:font=> "Verdana"
-
+	
     table_data = [
     ["a=?\n int orig = #{a}\n int insert = #{b}\n int a = orig | (insert      8)",
      "b=?\n int orig = #{a}\n int insert = #{b}\n int a = orig | (insert      6)"],
@@ -46,5 +45,24 @@ Prawn::Document.generate("test.pdf") do |pdf|
 	pdf.draw_text "<<", :at => [358,597]
 	pdf.draw_text "<<", :at => [358,584]
 	pdf.draw_text "<<", :at => [347,518]
+	
+	pdf.font "#{Prawn::BASEDIR}/data/fonts/MCTIMEI.TTF" 
+	pdf.text "Технологично Училище Електронни Системи"
+
+	
 	  
 end
+
+
+fileHtml = File.new("test.html", "w+")
+fileHtml.puts "<HTML><BODY>"
+fileHtml.puts "<CENTER>"
+fileHtml.puts "<TABLE border=1>"
+fileHtml.puts "<TR><TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert<<8)</TD><TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert<<8)</TD></TR>"
+fileHtml.puts "</TABLE>"
+fileHtml.puts "</CENTER>"
+fileHtml.puts "</BODY></HTML>"
+fileHtml.close()
+
+
+
