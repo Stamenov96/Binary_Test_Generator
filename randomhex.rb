@@ -73,6 +73,9 @@ fileHtml.puts "<TD>OR=?\n int orig = #{a}\n int insert = #{b}\n int a = orig | (
 fileHtml.puts "left=?\n int i=#{a}\n int left= #{a} | (1      10);</TD>"
 fileHtml.puts "</TR>"
 
+
+
+
 fileHtml.puts "</TABLE>"
 fileHtml.puts "</CENTER>"
 fileHtml.puts "</BODY></HTML>"
