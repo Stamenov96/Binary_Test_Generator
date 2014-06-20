@@ -2,25 +2,36 @@
 <CENTER>
 <TABLE border=1>
 <TR>
-<TD> a=?<br> int orig = ad19<br> int insert = 8f65<br> int a = orig | (insert<<8)</TD>
-<TD> a=?<br> int orig = ad19<br> int insert = 8f65<br> int a = orig | (insert<<8)</TD>
+<TD> a=?<br> int orig = 0a85<br> int insert = ded7<br> int a = orig | (insert<<8)</TD>
+<TD> a=?<br> int orig = 0a85<br> int insert = ded7<br> int a = orig | (insert<<8)</TD>
 </TR>
 <TR>
 <TD>AND=?
- int orig = ad19<br> int insert = 8f65<br> int a = orig | (insert      8)<br> int b = orig | (insert      6)<br> int AND = a & b;</TD>
+ int orig = 0a85<br> int insert = ded7<br> int a = orig | (insert      8)<br> int b = orig | (insert      6)<br> int AND = a & b;</TD>
 <TD>OR=?
- int orig = ad19<br> int insert = 8f65<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int OR = a & b;</TD>
+ int orig = 0a85<br> int insert = ded7<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int OR = a & b;</TD>
 </TR>
 <TR>
 <TD>OR=?
- int orig = ad19
- int insert = 8f65
+ int orig = 0a85
+ int insert = ded7
  int a = orig | (insert      7)
  int b = orig | (insert      5)
  int XOR = a ^ b;</TD>
 left=?
- int i=ad19
- int left= ad19 | (1      10);</TD>
+ int i=0a85
+ int left= 0a85 | (1      10);</TD>
+</TR>
+<TR>
+<TD>OR=?
+ int orig = 0a85
+ int insert = ded7
+ int a = orig | (insert      7)
+ int b = orig | (insert      5)
+ int XOR = a ^ b;</TD>
+<TD>left=?
+ int i=0a85
+ int left= 0a85 | (1      10);</TD>
 </TR>
 </TABLE>
 </CENTER>

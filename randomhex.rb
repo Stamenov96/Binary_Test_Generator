@@ -70,7 +70,12 @@ fileHtml.puts "</TR>"
 
 fileHtml.puts "<TR>"
 fileHtml.puts "<TD>OR=?\n int orig = #{a}\n int insert = #{b}\n int a = orig | (insert      7)\n int b = orig | (insert      5)\n int XOR = a ^ b;</TD>"
-fileHtml.puts "left=?\n int i=#{a}\n int left= #{a} | (1      10);</TD>"
+fileHtml.puts "<TD>left=?\n int i=#{a}\n int left= #{a} | (1      10);</TD>"
+fileHtml.puts "</TR>"
+
+fileHtml.puts "<TR>"
+fileHtml.puts "<TD>result=?\n long value1=#{c}\n long value2=#{d}\n int result=(value1      3)^(value2       2)</TD>"
+fileHtml.puts "<TD>result=?\n int value1=#{e}\n int value2=#{f}\n int result=(value1      3)^(value2      2)</TD>"
 fileHtml.puts "</TR>"
 
 
