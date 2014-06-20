@@ -63,6 +63,11 @@ fileHtml.puts "<TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = or
 fileHtml.puts "<TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert<<8)</TD>"
 fileHtml.puts "</TR>"
 
+fileHtml.puts "<TR>"
+fileHtml.puts "<TD>AND=?\n int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert      8)<br> int b = orig | (insert      6)<br> int AND = a & b;</TD>"
+fileHtml.puts "<TD>OR=?\n int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int OR = a & b;</TD>"
+fileHtml.puts "</TR>"
+
 fileHtml.puts "</TABLE>"
 fileHtml.puts "</CENTER>"
 fileHtml.puts "</BODY></HTML>"
