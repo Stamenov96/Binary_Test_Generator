@@ -58,7 +58,11 @@ fileHtml = File.new("test.html", "w+")
 fileHtml.puts "<HTML><BODY>"
 fileHtml.puts "<CENTER>"
 fileHtml.puts "<TABLE border=1>"
-fileHtml.puts "<TR><TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert<<8)</TD><TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert<<8)</TD></TR>"
+fileHtml.puts "<TR>"
+fileHtml.puts "<TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert<<8)</TD>"
+fileHtml.puts "<TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert<<8)</TD>"
+fileHtml.puts "</TR>"
+
 fileHtml.puts "</TABLE>"
 fileHtml.puts "</CENTER>"
 fileHtml.puts "</BODY></HTML>"

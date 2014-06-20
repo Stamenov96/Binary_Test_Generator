@@ -1,7 +1,27 @@
 <HTML><BODY>
 <CENTER>
 <TABLE border=1>
-<TR><TD> a=?<br> int orig = 3994<br> int insert = 09b9<br> int a = orig | (insert<<8)</TD><TD> a=?<br> int orig = 3994<br> int insert = 09b9<br> int a = orig | (insert<<8)</TD></TR>
+<TR>
+<TD> a=?<br> int orig = ad19<br> int insert = 8f65<br> int a = orig | (insert<<8)</TD>
+<TD> a=?<br> int orig = ad19<br> int insert = 8f65<br> int a = orig | (insert<<8)</TD>
+</TR>
+<TR>
+<TD>AND=?
+ int orig = ad19<br> int insert = 8f65<br> int a = orig | (insert      8)<br> int b = orig | (insert      6)<br> int AND = a & b;</TD>
+<TD>OR=?
+ int orig = ad19<br> int insert = 8f65<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int OR = a & b;</TD>
+</TR>
+<TR>
+<TD>OR=?
+ int orig = ad19
+ int insert = 8f65
+ int a = orig | (insert      7)
+ int b = orig | (insert      5)
+ int XOR = a ^ b;</TD>
+left=?
+ int i=ad19
+ int left= ad19 | (1      10);</TD>
+</TR>
 </TABLE>
 </CENTER>
 </BODY></HTML>
