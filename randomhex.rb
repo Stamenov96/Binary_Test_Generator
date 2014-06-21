@@ -60,7 +60,7 @@ fileHtml.puts "<CENTER>"
 fileHtml.puts "<TABLE border=1>"
 fileHtml.puts "<TR>"
 fileHtml.puts "<TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert<<8)</TD>"
-fileHtml.puts "<TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert<<8)</TD>"
+fileHtml.puts "<TD> b=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert<<6)</TD>"
 fileHtml.puts "</TR>"
 
 fileHtml.puts "<TR>"

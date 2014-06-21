@@ -2,30 +2,30 @@
 <CENTER>
 <TABLE border=1>
 <TR>
-<TD> a=?<br> int orig = 36ca<br> int insert = e682<br> int a = orig | (insert<<8)</TD>
-<TD> a=?<br> int orig = 36ca<br> int insert = e682<br> int a = orig | (insert<<8)</TD>
+<TD> a=?<br> int orig = 4124<br> int insert = 8ceb<br> int a = orig | (insert<<8)</TD>
+<TD> b=?<br> int orig = 4124<br> int insert = 8ceb<br> int a = orig | (insert<<6)</TD>
 </TR>
 <TR>
 <TD>AND=?
- int orig = 36ca<br> int insert = e682<br> int a = orig | (insert      8)<br> int b = orig | (insert      6)<br> int AND = a & b;</TD>
+ int orig = 4124<br> int insert = 8ceb<br> int a = orig | (insert      8)<br> int b = orig | (insert      6)<br> int AND = a & b;</TD>
 <TD>OR=?
- int orig = 36ca<br> int insert = e682<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int OR = a & b;</TD>
+ int orig = 4124<br> int insert = 8ceb<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int OR = a & b;</TD>
 </TR>
 <TR>
-<TD>OR=?<br> int orig = 36ca<br> int insert = e682<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int XOR = a ^ b;</TD>
-<TD>left=?<br> int i=36ca<br> int left= 36ca | (1      10);</TD>
+<TD>OR=?<br> int orig = 4124<br> int insert = 8ceb<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int XOR = a ^ b;</TD>
+<TD>left=?<br> int i=4124<br> int left= 4124 | (1      10);</TD>
 </TR>
 <TR>
-<TD>result=?<br> long value1=e2edd9aa<br> long value2=3d229fcb<br> int result=(value1      3)^(value2       2)</TD>
-<TD>result=?<br> int value1=221<br> int value2=822<br> int result=(value1      3)^(value2      2)</TD>
+<TD>result=?<br> long value1=305a957f<br> long value2=3ec68aee<br> int result=(value1      3)^(value2       2)</TD>
+<TD>result=?<br> int value1=840<br> int value2=597<br> int result=(value1      3)^(value2      2)</TD>
 </TR>
 <TR>
-<TD>a=?<br> long testValue=e2edd9aa<br> int a=0<br> if (testValue & (1      4))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>
-<TD>a=? result=?<br> long testValue=e2edd9aa<br> int a=0<br> int result=0<br> if((result=testValue & testValue ^ testValue | (1      4)))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>
+<TD>a=?<br> long testValue=305a957f<br> int a=0<br> if (testValue & (1      4))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>
+<TD>a=? result=?<br> long testValue=305a957f<br> int a=0<br> int result=0<br> if((result=testValue & testValue ^ testValue | (1      4)))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>
 </TR>
 <TR>
-<TD>result=?<br> int value1=537<br> int value2=668<br> int result =(value1      3)^(value2      2)</TD>
-<TD>result=?<br> int value1=617<br> int value2=7533<br> int result =(value1      5)^(value2      4)</TD>
+<TD>result=?<br> int value1=311<br> int value2=433<br> int result =(value1      3)^(value2      2)</TD>
+<TD>result=?<br> int value1=592<br> int value2=9140<br> int result =(value1      5)^(value2      4)</TD>
 </TR>
 </TABLE>
 </CENTER>
