@@ -78,6 +78,11 @@ fileHtml.puts "<TD>result=?\n long value1=#{c}\n long value2=#{d}\n int result=(
 fileHtml.puts "<TD>result=?\n int value1=#{e}\n int value2=#{f}\n int result=(value1      3)^(value2      2)</TD>"
 fileHtml.puts "</TR>"
 
+fileHtml.puts "<TR>"
+fileHtml.puts "<TD>a=?\n long testValue=#{c}\n int a=0\n if (testValue & (1      4))\n {\n a=1\n }\n else\n {\n a=2\n }\n</TD>"
+fileHtml.puts "<TD>a=? result=?\n long testValue=#{c}\n int a=0\n int result=0\n if((result=testValue & testValue ^ testValue | (1      4)))\n {\n a=1\n }\n else\n {\n a=2\n }\n</TD>"
+fileHtml.puts "</TR>"
+
 
 
 

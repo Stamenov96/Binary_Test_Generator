@@ -2,36 +2,62 @@
 <CENTER>
 <TABLE border=1>
 <TR>
-<TD> a=?<br> int orig = 0a85<br> int insert = ded7<br> int a = orig | (insert<<8)</TD>
-<TD> a=?<br> int orig = 0a85<br> int insert = ded7<br> int a = orig | (insert<<8)</TD>
+<TD> a=?<br> int orig = b6cd<br> int insert = 1103<br> int a = orig | (insert<<8)</TD>
+<TD> a=?<br> int orig = b6cd<br> int insert = 1103<br> int a = orig | (insert<<8)</TD>
 </TR>
 <TR>
 <TD>AND=?
- int orig = 0a85<br> int insert = ded7<br> int a = orig | (insert      8)<br> int b = orig | (insert      6)<br> int AND = a & b;</TD>
+ int orig = b6cd<br> int insert = 1103<br> int a = orig | (insert      8)<br> int b = orig | (insert      6)<br> int AND = a & b;</TD>
 <TD>OR=?
- int orig = 0a85<br> int insert = ded7<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int OR = a & b;</TD>
+ int orig = b6cd<br> int insert = 1103<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int OR = a & b;</TD>
 </TR>
 <TR>
 <TD>OR=?
- int orig = 0a85
- int insert = ded7
- int a = orig | (insert      7)
- int b = orig | (insert      5)
- int XOR = a ^ b;</TD>
-left=?
- int i=0a85
- int left= 0a85 | (1      10);</TD>
-</TR>
-<TR>
-<TD>OR=?
- int orig = 0a85
- int insert = ded7
+ int orig = b6cd
+ int insert = 1103
  int a = orig | (insert      7)
  int b = orig | (insert      5)
  int XOR = a ^ b;</TD>
 <TD>left=?
- int i=0a85
- int left= 0a85 | (1      10);</TD>
+ int i=b6cd
+ int left= b6cd | (1      10);</TD>
+</TR>
+<TR>
+<TD>result=?
+ long value1=0d26e35d
+ long value2=70018f19
+ int result=(value1      3)^(value2       2)</TD>
+<TD>result=?
+ int value1=243
+ int value2=695
+ int result=(value1      3)^(value2      2)</TD>
+</TR>
+<TR>
+<TD>a=?
+ long testValue=0d26e35d
+ int a=0
+ if (testValue & (1      4))
+ {
+ a=1
+ }
+ else
+ {
+ a=2
+ }
+</TD>
+<TD>a=? result=?
+ long testValue=0d26e35d
+ int a=0
+ int result=0
+ if((result=testValue & testValue ^ testValue | (1      4)))
+ {
+ a=1
+ }
+ else
+ {
+ a=2
+ }
+</TD>
 </TR>
 </TABLE>
 </CENTER>
