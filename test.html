@@ -2,39 +2,39 @@
 <CENTER>
 <TABLE border=1>
 <TR>
-<TD> a=?<br> int orig = b6cd<br> int insert = 1103<br> int a = orig | (insert<<8)</TD>
-<TD> a=?<br> int orig = b6cd<br> int insert = 1103<br> int a = orig | (insert<<8)</TD>
+<TD> a=?<br> int orig = 3a43<br> int insert = b388<br> int a = orig | (insert<<8)</TD>
+<TD> a=?<br> int orig = 3a43<br> int insert = b388<br> int a = orig | (insert<<8)</TD>
 </TR>
 <TR>
 <TD>AND=?
- int orig = b6cd<br> int insert = 1103<br> int a = orig | (insert      8)<br> int b = orig | (insert      6)<br> int AND = a & b;</TD>
+ int orig = 3a43<br> int insert = b388<br> int a = orig | (insert      8)<br> int b = orig | (insert      6)<br> int AND = a & b;</TD>
 <TD>OR=?
- int orig = b6cd<br> int insert = 1103<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int OR = a & b;</TD>
+ int orig = 3a43<br> int insert = b388<br> int a = orig | (insert      7)<br> int b = orig | (insert      5)<br> int OR = a & b;</TD>
 </TR>
 <TR>
 <TD>OR=?
- int orig = b6cd
- int insert = 1103
+ int orig = 3a43
+ int insert = b388
  int a = orig | (insert      7)
  int b = orig | (insert      5)
  int XOR = a ^ b;</TD>
 <TD>left=?
- int i=b6cd
- int left= b6cd | (1      10);</TD>
+ int i=3a43
+ int left= 3a43 | (1      10);</TD>
 </TR>
 <TR>
 <TD>result=?
- long value1=0d26e35d
- long value2=70018f19
+ long value1=43c8e0c5
+ long value2=2e4079ff
  int result=(value1      3)^(value2       2)</TD>
 <TD>result=?
- int value1=243
- int value2=695
+ int value1=40
+ int value2=802
  int result=(value1      3)^(value2      2)</TD>
 </TR>
 <TR>
 <TD>a=?
- long testValue=0d26e35d
+ long testValue=43c8e0c5
  int a=0
  if (testValue & (1      4))
  {
@@ -46,7 +46,7 @@
  }
 </TD>
 <TD>a=? result=?
- long testValue=0d26e35d
+ long testValue=43c8e0c5
  int a=0
  int result=0
  if((result=testValue & testValue ^ testValue | (1      4)))
@@ -58,6 +58,16 @@
  a=2
  }
 </TD>
+</TR>
+<TR>
+<TD>result=?
+ int value1=702
+ int value2=759
+ int result =(value1      3)^(value2      2)</TD>
+<TD>result=?
+ int value1=663
+ int value2=1981
+ int result =(value1      5)^(value2      4)</TD>
 </TR>
 </TABLE>
 </CENTER>
