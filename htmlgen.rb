@@ -1,4 +1,4 @@
-#encoding utf-8
+#encoding: utf-8
 
 def html (a,b,c,d,e,f,g,h,i,j,var)
 
