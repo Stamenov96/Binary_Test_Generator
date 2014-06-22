@@ -24,6 +24,10 @@ FileUtils.mkpath('pdf')
 Dir.chdir("./pdf")do
 	pdf(a,b,c,d,e,f,g,h,i,j,var)
 end	
+
+FileUtils.mkpath('html')
+Dir.chdir("./html")do
 	html(a,b,c,d,e,f,g,h,i,j,var)
+end
 
 end
