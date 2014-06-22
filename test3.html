@@ -1,0 +1,41 @@
+<HTML><BODY>
+<CENTER>
+<h1>
+Технологично Училище Електронни Системи
+</h1>
+<h3>
+Технология на програмирането<br>Тест побитови операции
+</h3>
+<h5>
+Вариянт №3
+</h5>
+<TABLE border=1>
+<TR>
+<TD> a=?<br> int orig = 5930<br> int insert = 961f<br> int a = orig | (insert << 8)</TD>
+<TD> b=?<br> int orig = 5930<br> int insert = 961f<br> int a = orig | (insert << 6)</TD>
+</TR>
+<TR>
+<TD>AND=?
+ int orig = 5930<br> int insert = 961f<br> int a = orig | (insert << 8)<br> int b = orig | (insert << 6)<br> int AND = a & b;</TD>
+<TD>OR=?
+ int orig = 5930<br> int insert = 961f<br> int a = orig | (insert << 7)<br> int b = orig | (insert << 5)<br> int OR = a & b;</TD>
+</TR>
+<TR>
+<TD>OR=?<br> int orig = 5930<br> int insert = 961f<br> int a = orig | (insert << 7)<br> int b = orig | (insert << 5)<br> int XOR = a ^ b;</TD>
+<TD>left=?<br> int i=5930<br> int left= 5930 | (1 << 10);</TD>
+</TR>
+<TR>
+<TD>result=?<br> long value1=13e4f1e2<br> long value2=072c197f<br> int result=(value1 << 3)^(value2 << 2)</TD>
+<TD>result=?<br> int value1=266<br> int value2=636<br> int result=(value1 << 3)^(value2 << 2)</TD>
+</TR>
+<TR>
+<TD>a=?<br> long testValue=13e4f1e2<br> int a=0<br> if (testValue & (1 << 4))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>
+<TD>a=? result=?<br> long testValue=13e4f1e2<br> int a=0<br> int result=0<br> if((result=testValue & testValue ^ testValue | (1 << 4)))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>
+</TR>
+<TR>
+<TD>result=?<br> int value1=856<br> int value2=615<br> int result =(value1 << 3)^(value2 << 2)</TD>
+<TD>result=?<br> int value1=492<br> int value2=7212<br> int result =(value1 << 5)^(value2 << 4)</TD>
+</TR>
+</TABLE>
+</CENTER>
+</BODY></HTML>

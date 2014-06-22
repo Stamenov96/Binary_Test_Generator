@@ -4,6 +4,11 @@ require 'prawn'
 
 
 
+puts "How much test do you want to generate?"
+num=gets.chomp.to_i
+
+for var in 1..num
+
 a=SecureRandom.hex(2)
 b=SecureRandom.hex(2)
 #p a.hex.to_s(2)
@@ -16,7 +21,11 @@ h=rand(1000)
 i=rand(1000)
 j=rand(10000)
 
-Prawn::Document.generate("test.pdf") do |pdf|
+
+
+
+
+Prawn::Document.generate("test#{var}.pdf") do |pdf|
 	
 	
     table_data = [
@@ -54,12 +63,18 @@ Prawn::Document.generate("test.pdf") do |pdf|
 end
 
 
-fileHtml = File.new("test.html", "w+")
+fileHtml = File.new("test#{var}.html", "w+")
 fileHtml.puts "<HTML><BODY>"
 fileHtml.puts "<CENTER>"
 fileHtml.puts "<h1>"
 fileHtml.puts "Технологично Училище Електронни Системи"
 fileHtml.puts "</h1>"
+fileHtml.puts "<h3>"
+fileHtml.puts "Технология на програмирането<br>Тест побитови операции"
+fileHtml.puts "</h3>"
+fileHtml.puts "<h5>"
+fileHtml.puts "Вариянт №#{var}"
+fileHtml.puts "</h5>"
 
 
 
@@ -104,3 +119,4 @@ fileHtml.close()
 
 
 
+end
