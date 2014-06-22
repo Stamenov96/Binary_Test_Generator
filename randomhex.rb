@@ -57,6 +57,12 @@ end
 fileHtml = File.new("test.html", "w+")
 fileHtml.puts "<HTML><BODY>"
 fileHtml.puts "<CENTER>"
+fileHtml.puts "<h1>"
+fileHtml.puts "Технологично Училище Електронни Системи"
+fileHtml.puts "</h1>"
+
+
+
 fileHtml.puts "<TABLE border=1>"
 fileHtml.puts "<TR>"
 fileHtml.puts "<TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert << 8)</TD>"
