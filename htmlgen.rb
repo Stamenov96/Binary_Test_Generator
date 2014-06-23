@@ -16,6 +16,7 @@ j=rand(10000)
 
 
 
+
 fileHtml = File.new("test#{var}.html", "w+")
 fileHtml.puts "<HTML><BODY>"
 fileHtml.puts "<CENTER>"
@@ -29,39 +30,52 @@ fileHtml.puts "<h5>"
 fileHtml.puts "Вариянт №#{var}"
 fileHtml.puts "</h5>"
 
+odd=[1,3,5,7,9]
+even=[2,4,6,8,10]
 
+chetno1=even[rand(5)]
+chetno2=even[rand(5)]
 
 fileHtml.puts "<TABLE border=1>"
 fileHtml.puts "<TR>"
-fileHtml.puts "<TD> a=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert << 8)</TD>"
-fileHtml.puts "<TD> b=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert << 6)</TD>"
+fileHtml.puts "<TD> a=? <br> int orig = #{a} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int insert = #{b}<br> int a = orig | (insert << #{chetno1})</TD>"
+fileHtml.puts "<TD> b=?<br> int orig = #{a} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ......... <br> int insert = #{b}<br> int a = orig | (insert << #{chetno2})</TD>"
 fileHtml.puts "</TR>"
 
 fileHtml.puts "<TR>"
-fileHtml.puts "<TD>AND=?\n int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert << 8)<br> int b = orig | (insert << 6)<br> int AND = a & b;</TD>"
-fileHtml.puts "<TD>OR=?\n int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert << 7)<br> int b = orig | (insert << 5)<br> int OR = a & b;</TD>"
+fileHtml.puts "<TD>AND=?<br> int orig = #{a} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int insert = #{b}<br> int a = orig | (insert << #{chetno1})<br> int b = orig | (insert << #{chetno2})<br> int AND = a & b;</TD>"
+nechetno1=odd[rand(5)]
+nechetno2=odd[rand(5)]
+fileHtml.puts "<TD>OR=?<br> int orig = #{a} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int insert = #{b}<br> int a = orig | (insert << #{nechetno1})<br> int b = orig | (insert << #{nechetno2})<br> int OR = a & b;</TD>"
 fileHtml.puts "</TR>"
 
 fileHtml.puts "<TR>"
-fileHtml.puts "<TD>OR=?<br> int orig = #{a}<br> int insert = #{b}<br> int a = orig | (insert << 7)<br> int b = orig | (insert << 5)<br> int XOR = a ^ b;</TD>"
-fileHtml.puts "<TD>left=?<br> int i=#{a}<br> int left= #{a} | (1 << 10);</TD>"
+fileHtml.puts "<TD>OR=?<br> int orig = #{a} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int insert = #{b}<br> int a = orig | (insert << #{nechetno1})<br> int b = orig | (insert << #{nechetno2})<br> int XOR = a ^ b;</TD>"
+chetno=even[rand(5)]
+fileHtml.puts "<TD>left=?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int i=#{a}<br> int left= #{a} | (1 << #{chetno});</TD>"
+fileHtml.puts "</TR>"
+
+
+fileHtml.puts "<TR>"
+chetno=even[rand(5)]
+nechetno=odd[rand(5)]
+fileHtml.puts "<TD>result=?<br> long value1=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> long value2=#{d}<br> int result=(value1 << #{nechetno})^(value2 << #{chetno})</TD>"
+fileHtml.puts "<TD>result=?<br> int value1=#{e} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int value2=#{f}<br> int result=(value1 << #{nechetno})^(value2 << #{chetno})</TD>"
 fileHtml.puts "</TR>"
 
 fileHtml.puts "<TR>"
-fileHtml.puts "<TD>result=?<br> long value1=#{c}<br> long value2=#{d}<br> int result=(value1 << 3)^(value2 << 2)</TD>"
-fileHtml.puts "<TD>result=?<br> int value1=#{e}<br> int value2=#{f}<br> int result=(value1 << 3)^(value2 << 2)</TD>"
+chetno=even[rand(5)]
+fileHtml.puts "<TD>a=?<br> long testValue=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int a=0<br> if (testValue & (1 << #{chetno}))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>"
+fileHtml.puts "<TD>a=? result=?<br> long testValue=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int a=0<br> int result=0<br> if((result=testValue & testValue ^ testValue | (1 << #{chetno})))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>"
 fileHtml.puts "</TR>"
 
 fileHtml.puts "<TR>"
-fileHtml.puts "<TD>a=?<br> long testValue=#{c}<br> int a=0<br> if (testValue & (1 << 4))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>"
-fileHtml.puts "<TD>a=? result=?<br> long testValue=#{c}<br> int a=0<br> int result=0<br> if((result=testValue & testValue ^ testValue | (1 << 4)))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>"
-fileHtml.puts "</TR>"
+chetno=even[rand(5)]
+nechetno=odd[rand(5)]
 
-fileHtml.puts "<TR>"
-fileHtml.puts "<TD>result=?<br> int value1=#{g}<br> int value2=#{h}<br> int result =(value1 << 3)^(value2 << 2)</TD>"
-fileHtml.puts "<TD>result=?<br> int value1=#{i}<br> int value2=#{j}<br> int result =(value1 << 5)^(value2 << 4)</TD>"
+fileHtml.puts "<TD>result=?<br> int value1=#{g} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ......... <br> int value2=#{h}<br> int result =(value1 << #{nechetno})^(value2 << #{chetno})</TD>"
+fileHtml.puts "<TD>result=?<br> int value1=#{i} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ......... <br> int value2=#{j}<br> int result =(value1 << #{nechetno})^(value2 << #{chetno})</TD>"
 fileHtml.puts "</TR>"
-
 
 
 
@@ -69,5 +83,6 @@ fileHtml.puts "</TABLE>"
 fileHtml.puts "</CENTER>"
 fileHtml.puts "</BODY></HTML>"
 fileHtml.close()
+
 
 end
