@@ -1,33 +1,30 @@
 # coding: utf-8
 require 'securerandom'
 require './htmlgen'
-require './pdfgen'
 require 'fileutils'
+require 'pdfkit'
 
 puts "How much test do you want to generate?"
 num=gets.chomp.to_i
 
 for var in 1..num
 
-a=SecureRandom.hex(2)
-b=SecureRandom.hex(2)
-c=SecureRandom.hex(4)
-d=SecureRandom.hex(4)
-e=rand(1000)
-f=rand(1000)
-g=rand(1000)
-h=rand(1000)
-i=rand(1000)
-j=rand(10000)
-
-FileUtils.mkpath('pdf')
-Dir.chdir("./pdf")do
-	pdf(a,b,c,d,e,f,g,h,i,j,var)
-end	
+#FileUtils.mkpath('pdf')
+#Dir.chdir("./pdf")do
+#	pdf(a,b,c,d,e,f,g,h,i,j,var)
+#end	
 
 FileUtils.mkpath('html')
 Dir.chdir("./html")do
-	html(a,b,c,d,e,f,g,h,i,j,var)
+	html(var)#(a,b,c,d,e,f,g,h,i,j,var)
 end
+
+FileUtils.mkpath('PDF')
+Dir.chdir("./PDF") do
+	kit = PDFKit.new(File.new("../html/test#{var}.html"))
+	file = kit.to_file("./test#{var}.pdf")
+end
+
+
 
 end

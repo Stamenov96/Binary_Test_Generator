@@ -1,6 +1,18 @@
 #encoding: utf-8
 
-def html (a,b,c,d,e,f,g,h,i,j,var)
+def html (var)#(a,b,c,d,e,f,g,h,i,j,var)
+
+a=SecureRandom.hex(2)
+b=SecureRandom.hex(2)
+c=SecureRandom.hex(4)
+d=SecureRandom.hex(4)
+e=rand(1000)
+f=rand(1000)
+g=rand(1000)
+h=rand(1000)
+i=rand(1000)
+j=rand(10000)
+
 
 
 
