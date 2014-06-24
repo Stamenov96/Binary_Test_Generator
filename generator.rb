@@ -9,7 +9,6 @@ num=gets.chomp.to_i
 
 puts "Choose a difficulty - easy,medium,hard"
 diff=gets.chomp.to_s
-puts diff
 
 while (diff!="easy" and diff!="medium" and diff!="hard")
 puts "Wrong difficulty! Hint: easy,medium,hard"
