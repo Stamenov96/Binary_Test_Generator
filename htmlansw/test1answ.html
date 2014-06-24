@@ -11,28 +11,28 @@
 </h5>
 <TABLE border=1>
 <TR>
-<TD> a=? <br> int orig = de61 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=8fee1<br> int insert = 8e6a<br> int a = orig | (insert << 4)</TD>
-<TD> b=?<br> int orig = de61 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b=239fe61 <br> int insert = 8e6a<br> int a = orig | (insert << 10)</TD>
+<TD> a=? <br> int orig = 0b03 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=3818b03<br> int insert = e060<br> int a = orig | (insert << 10)</TD>
+<TD> b=?<br> int orig = 0b03 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b=e0f03 <br> int insert = e060<br> int a = orig | (insert << 4)</TD>
 </TR>
 <TR>
-<TD>AND=?<br> int orig = de61 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND=8fe61<br> int insert = 8e6a<br> int a = orig | (insert << 4)<br> int b = orig | (insert << 10)<br> int AND = a & b;</TD>
-<TD>OR=?<br> int orig = de61 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR=8fe61<br> int insert = 8e6a<br> int a = orig | (insert << 1)<br> int b = orig | (insert << 9)<br> int OR = a & b;</TD>
+<TD>AND=?<br> int orig = 0b03 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND=b03<br> int insert = e060<br> int a = orig | (insert << 10)<br> int b = orig | (insert << 4)<br> int AND = a & b;</TD>
+<TD>OR=?<br> int orig = 0b03 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR=b03<br> int insert = e060<br> int a = orig | (insert << 5)<br> int b = orig | (insert << 1)<br> int OR = a & b;</TD>
 </TR>
 <TR>
-<TD>OR=?<br> int orig = de61 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR=2310080<br> int insert = 8e6a<br> int a = orig | (insert << 1)<br> int b = orig | (insert << 9)<br> int XOR = a ^ b;</TD>
-<TD>left=?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left=df61<br> int i=de61<br> int left= de61 | (1 << 8);</TD>
+<TD>OR=?<br> int orig = 0b03 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR=38f8400<br> int insert = e060<br> int a = orig | (insert << 5)<br> int b = orig | (insert << 1)<br> int XOR = a ^ b;</TD>
+<TD>left=?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left=b03<br> int i=0b03<br> int left= 0b03 | (1 << 8);</TD>
 </TR>
 <TR>
-<TD>result=?<br> long value1=d3dc7f13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=22a20acde26<br> long value2=8ae1c508<br> int result=(value1 << 1)^(value2 << 10)</TD>
-<TD>result=?<br> int value1=959 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=22a20acde26<br> int value2=904<br> int result=(value1 << 1)^(value2 << 10)</TD>
+<TD>result=?<br> long value1=2200dd00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=11006ce40<br> long value2=000099<br> int result=(value1 << 3)^(value2 << 6)</TD>
+<TD>result=?<br> int value1=451 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=11006ce40<br> int value2=957<br> int result=(value1 << 3)^(value2 << 6)</TD>
 </TR>
 <TR>
-<TD>a=?<br> long testValue=d3dc7f13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=2<br> int a=0<br> if (testValue & (1 << 6))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>
-<TD>a=? result=?<br> long testValue=d3dc7f13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=1 &nbsp; result=0 <br> int a=0<br> int result=0<br> if((result=testValue & testValue ^ testValue | (1 << 6)))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>
+<TD>a=?<br> long testValue=2200dd00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=1<br> int a=0<br> if (testValue & (1 << 8))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>
+<TD>a=? result=?<br> long testValue=2200dd00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=1 &nbsp; result=0 <br> int a=0<br> int result=0<br> if((result=testValue & testValue ^ testValue | (1 << 8)))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>
 </TR>
 <TR>
-<TD>result=?<br> int value1=381 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=3190 <br> int value2=483<br> int result =(value1 << 5)^(value2 << 4)</TD>
-<TD>result=?<br> int value1=927 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=3190 <br> int value2=9339<br> int result =(value1 << 5)^(value2 << 4)</TD>
+<TD>result=?<br> int value1=196 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=18a10 <br> int value2=33<br> int result =(value1 << 9)^(value2 << 4)</TD>
+<TD>result=?<br> int value1=971 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=18a10 <br> int value2=6142<br> int result =(value1 << 9)^(value2 << 4)</TD>
 </TR>
 </TABLE>
 </CENTER>

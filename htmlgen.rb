@@ -1,11 +1,53 @@
 #encoding: utf-8
 
-def html (var)#(a,b,c,d,e,f,g,h,i,j,var)
+def html (var,diff)#(a,b,c,d,e,f,g,h,i,j,var)
 
+	num=["1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"]
+
+if (diff=="easy")
+	r=rand(16)
+	#n=rand(16)
+	a="0#{num[r]}0#{num[r]}"
+	
+	r=rand(16)
+	#n=rand(16)
+	b="#{num[r]}0#{num[r]}0"
+	
+	r=rand(16)
+	c="#{num[r]}#{num[r]}00#{num[r]}#{num[r]}00"
+	
+	r=rand(16)
+	d="00#{num[r]}#{num[r]}00#{num[r]}#{num[r]}"
+
+elsif (diff=="medium")
+
+	r=rand(16)
+	n=rand(16)
+	a="0#{num[r]}0#{num[n]}"
+	
+	r=rand(16)
+	n=rand(16)
+	b="#{num[r]}0#{num[n]}0"
+	
+	r=rand(16)
+	n=rand(16)
+	c="#{num[r]}#{num[r]}00#{num[n]}#{num[n]}00"
+	
+	r=rand(16)
+	n=rand(16)
+	d="00#{num[r]}#{num[r]}00#{num[n]}#{num[n]}"
+
+
+elsif (diff=="hard")
+	
 a=SecureRandom.hex(2)
 b=SecureRandom.hex(2)
 c=SecureRandom.hex(4)
 d=SecureRandom.hex(4)
+
+	
+end
+
 e=rand(1000)
 f=rand(1000)
 g=rand(1000)
@@ -140,8 +182,6 @@ task12a = (i<<"#{nechetno5}".to_i).to_s(16)
 task12b=(j<<"#{chetno5}".to_i).to_s(16)
 task12res=(task11a.to_i(16) ^ task11b.to_i(16)).to_s(16)
 
-
-FileUtils.mkpath('../htmlansw') unless File.exists?('../htmlansw')
 
 Dir.chdir("../htmlansw")do
 
