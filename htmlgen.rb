@@ -57,24 +57,24 @@ fileHtml.puts "</TR>"
 
 
 fileHtml.puts "<TR>"
-chetno=even[rand(5)]
-nechetno=odd[rand(5)]
-fileHtml.puts "<TD>result=?<br> long value1=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> long value2=#{d}<br> int result=(value1 << #{nechetno})^(value2 << #{chetno})</TD>"
-fileHtml.puts "<TD>result=?<br> int value1=#{e} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int value2=#{f}<br> int result=(value1 << #{nechetno})^(value2 << #{chetno})</TD>"
+chetno3=even[rand(5)]
+nechetno3=odd[rand(5)]
+fileHtml.puts "<TD>result=?<br> long value1=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> long value2=#{d}<br> int result=(value1 << #{nechetno3})^(value2 << #{chetno3})</TD>"
+fileHtml.puts "<TD>result=?<br> int value1=#{e} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int value2=#{f}<br> int result=(value1 << #{nechetno3})^(value2 << #{chetno3})</TD>"
 fileHtml.puts "</TR>"
 
 fileHtml.puts "<TR>"
-chetno=even[rand(5)]
-fileHtml.puts "<TD>a=?<br> long testValue=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int a=0<br> if (testValue & (1 << #{chetno}))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>"
-fileHtml.puts "<TD>a=? result=?<br> long testValue=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int a=0<br> int result=0<br> if((result=testValue & testValue ^ testValue | (1 << #{chetno})))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>"
+chetno4=even[rand(5)]
+fileHtml.puts "<TD>a=?<br> long testValue=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int a=0<br> if (testValue & (1 << #{chetno4}))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>"
+fileHtml.puts "<TD>a=? result=?<br> long testValue=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .........<br> int a=0<br> int result=0<br> if((result=testValue & testValue ^ testValue | (1 << #{chetno4})))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>"
 fileHtml.puts "</TR>"
 
 fileHtml.puts "<TR>"
-chetno=even[rand(5)]
-nechetno=odd[rand(5)]
+chetno5=even[rand(5)]
+nechetno5=odd[rand(5)]
 
-fileHtml.puts "<TD>result=?<br> int value1=#{g} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ......... <br> int value2=#{h}<br> int result =(value1 << #{nechetno})^(value2 << #{chetno})</TD>"
-fileHtml.puts "<TD>result=?<br> int value1=#{i} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ......... <br> int value2=#{j}<br> int result =(value1 << #{nechetno})^(value2 << #{chetno})</TD>"
+fileHtml.puts "<TD>result=?<br> int value1=#{g} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ......... <br> int value2=#{h}<br> int result =(value1 << #{nechetno5})^(value2 << #{chetno5})</TD>"
+fileHtml.puts "<TD>result=?<br> int value1=#{i} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ......... <br> int value2=#{j}<br> int result =(value1 << #{nechetno5})^(value2 << #{chetno5})</TD>"
 fileHtml.puts "</TR>"
 
 
@@ -84,5 +84,7 @@ fileHtml.puts "</CENTER>"
 fileHtml.puts "</BODY></HTML>"
 fileHtml.close()
 
+
+task1 = (a.to_i(16)|(b.to_i(16)<<2)).to_s(16)
 
 end
