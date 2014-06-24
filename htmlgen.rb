@@ -141,5 +141,56 @@ task12b=(j<<"#{chetno5}".to_i).to_s(16)
 task12res=(task11a.to_i(16) ^ task11b.to_i(16)).to_s(16)
 
 
+FileUtils.mkpath('../htmlansw') unless File.exists?('../htmlansw')
+
+Dir.chdir("../htmlansw")do
+
+fileHtml = File.new("test#{var}answ.html", "w+")
+fileHtml.puts "<HTML><BODY>"
+fileHtml.puts "<CENTER>"
+fileHtml.puts "<h1>"
+fileHtml.puts "Технологично Училище Електронни Системи"
+fileHtml.puts "</h1>"
+fileHtml.puts "<h3>"
+fileHtml.puts "Технология на програмирането<br>Тест побитови операции"
+fileHtml.puts "</h3>"
+fileHtml.puts "<h5>"
+fileHtml.puts "Вариянт №#{var}"
+fileHtml.puts "</h5>"
+
+fileHtml.puts "<TABLE border=1>"
+fileHtml.puts "<TR>"
+fileHtml.puts "<TD> a=? <br> int orig = #{a} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=#{task1}<br> int insert = #{b}<br> int a = orig | (insert << #{chetno1})</TD>"
+fileHtml.puts "<TD> b=?<br> int orig = #{a} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b=#{task2} <br> int insert = #{b}<br> int a = orig | (insert << #{chetno2})</TD>"
+fileHtml.puts "</TR>"
+fileHtml.puts "<TR>"
+fileHtml.puts "<TD>AND=?<br> int orig = #{a} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND=#{task3AND}<br> int insert = #{b}<br> int a = orig | (insert << #{chetno1})<br> int b = orig | (insert << #{chetno2})<br> int AND = a & b;</TD>"
+fileHtml.puts "<TD>OR=?<br> int orig = #{a} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR=#{task4AND}<br> int insert = #{b}<br> int a = orig | (insert << #{nechetno1})<br> int b = orig | (insert << #{nechetno2})<br> int OR = a & b;</TD>"
+fileHtml.puts "</TR>"
+fileHtml.puts "<TR>"
+fileHtml.puts "<TD>OR=?<br> int orig = #{a} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OR=#{task5OR}<br> int insert = #{b}<br> int a = orig | (insert << #{nechetno1})<br> int b = orig | (insert << #{nechetno2})<br> int XOR = a ^ b;</TD>"
+fileHtml.puts "<TD>left=?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left=#{task6}<br> int i=#{a}<br> int left= #{a} | (1 << #{chetno});</TD>"
+fileHtml.puts "</TR>"
+fileHtml.puts "<TR>"
+fileHtml.puts "<TD>result=?<br> long value1=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=#{task7OR}<br> long value2=#{d}<br> int result=(value1 << #{nechetno3})^(value2 << #{chetno3})</TD>"
+fileHtml.puts "<TD>result=?<br> int value1=#{e} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=#{task8OR}<br> int value2=#{f}<br> int result=(value1 << #{nechetno3})^(value2 << #{chetno3})</TD>"
+fileHtml.puts "</TR>"
+fileHtml.puts "<TR>"
+fileHtml.puts "<TD>a=?<br> long testValue=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=#{task9a}<br> int a=0<br> if (testValue & (1 << #{chetno4}))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>"
+fileHtml.puts "<TD>a=? result=?<br> long testValue=#{c} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=#{task10a} &nbsp; result=#{task10res} <br> int a=0<br> int result=0<br> if((result=testValue & testValue ^ testValue | (1 << #{chetno4})))<br> {<br> a=1<br> }<br> else<br> {<br> a=2<br> }<br></TD>"
+fileHtml.puts "</TR>"
+fileHtml.puts "<TR>"
+fileHtml.puts "<TD>result=?<br> int value1=#{g} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=#{task11res} <br> int value2=#{h}<br> int result =(value1 << #{nechetno5})^(value2 << #{chetno5})</TD>"
+fileHtml.puts "<TD>result=?<br> int value1=#{i} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result=#{task12res} <br> int value2=#{j}<br> int result =(value1 << #{nechetno5})^(value2 << #{chetno5})</TD>"
+fileHtml.puts "</TR>"
+
+fileHtml.puts "</TABLE>"
+fileHtml.puts "</CENTER>"
+fileHtml.puts "</BODY></HTML>"
+fileHtml.close()
+
+
+end
+
 
 end

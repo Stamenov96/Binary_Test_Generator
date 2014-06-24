@@ -7,8 +7,9 @@ require 'pdfkit'
 puts "How much tests do you want to generate?"
 num=gets.chomp.to_i
 
-FileUtils.mkpath('html')
-FileUtils.mkpath('PDF')
+FileUtils.mkpath('html') unless File.exists?('html')
+FileUtils.mkpath('PDF') unless File.exists?('PDF')
+FileUtils.mkpath('PDFansw') unless File.exists?('PDFansw')
 
 for var in 1..num
 
@@ -21,6 +22,11 @@ Dir.chdir("./PDF") do
 	file = kit.to_file("./test#{var}.pdf")
 end
 
+
+Dir.chdir("./PDFansw") do
+	kit = PDFKit.new(File.new("../htmlansw/test#{var}answ.html"))
+	file = kit.to_file("./test#{var}answ.pdf")
+end
 
 
 end
