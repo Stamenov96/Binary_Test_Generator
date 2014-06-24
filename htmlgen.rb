@@ -33,8 +33,14 @@ fileHtml.puts "</h5>"
 odd=[1,3,5,7,9]
 even=[2,4,6,8,10]
 
+
 chetno1=even[rand(5)]
 chetno2=even[rand(5)]
+while chetno1==chetno2
+chetno1=even[rand(5)]
+chetno2=even[rand(5)]
+end
+
 
 fileHtml.puts "<TABLE border=1>"
 fileHtml.puts "<TR>"
@@ -85,6 +91,55 @@ fileHtml.puts "</BODY></HTML>"
 fileHtml.close()
 
 
-task1 = (a.to_i(16)|(b.to_i(16)<<2)).to_s(16)
+task1 = (a.to_i(16)|(b.to_i(16)<<"#{chetno1}".to_i)).to_s(16)
+task2 = (a.to_i(16)|(b.to_i(16)<<"#{chetno2}".to_i)).to_s(16)
+task3a = (a.to_i(16)|(b.to_i(16)<<"#{chetno1}".to_i)).to_s(16)
+task3b=(a.to_i(16)|(b.to_i(16)<<"#{chetno2}".to_i)).to_s(16)
+task3AND=(task3a.to_i(16) & task3b.to_i(16)).to_s(16)
+
+task4a = (a.to_i(16)|(b.to_i(16)<<"#{nechetno1}".to_i)).to_s(16)
+task4b=(a.to_i(16)|(b.to_i(16)<<"#{nechetno2}".to_i)).to_s(16)
+task4AND=(task3a.to_i(16) & task3b.to_i(16)).to_s(16)
+
+
+task5a = (a.to_i(16)|(b.to_i(16)<<"#{nechetno1}".to_i)).to_s(16)
+task5b=(a.to_i(16)|(b.to_i(16)<<"#{nechetno2}".to_i)).to_s(16)
+task5OR=(task3a.to_i(16) ^ task3b.to_i(16)).to_s(16)
+
+task6 = (a.to_i(16)|(1<<"#{chetno}".to_i)).to_s(16)
+
+task7a = (c.to_i(16)<<"#{nechetno3}".to_i).to_s(16)
+task7b=(d.to_i(16)<<"#{chetno3}".to_i).to_s(16)
+task7OR=(task7a.to_i(16) ^ task7b.to_i(16)).to_s(16)
+
+task8a = (e<<"#{nechetno3}".to_i).to_s(16)
+task8b=(f<<"#{chetno3}".to_i).to_s(16)
+task8OR=(task7a.to_i(16) ^ task7b.to_i(16)).to_s(16)
+
+task9a=0
+if ((c.to_i(16) & (1<<"#{chetno4}".to_i))!=0)
+task9a=1
+else
+task9a=2
+end
+
+task10a=0
+task10res=0
+
+if(((result=c.to_i(16) & c.to_i(16) ^ c.to_i(16) | (1<<"#{chetno4}".to_i)))!=0)
+task10a=1
+else
+task10a=2
+end
+
+task11a = (g<<"#{nechetno5}".to_i).to_s(16)
+task11b=(h<<"#{chetno5}".to_i).to_s(16)
+task11res=(task11a.to_i(16) ^ task11b.to_i(16)).to_s(16)
+
+task12a = (i<<"#{nechetno5}".to_i).to_s(16)
+task12b=(j<<"#{chetno5}".to_i).to_s(16)
+task12res=(task11a.to_i(16) ^ task11b.to_i(16)).to_s(16)
+
+
 
 end
