@@ -1,0 +1,24 @@
+US:
+	-Create an example of test
+Description:
+	-Generete random numbers and create an example of test
+
+US:
+	-Generate html
+Description:
+	-Generate html with the problems
+	
+US:
+	-Generate html with answers
+Description:
+	-Generate html with the problems and their answers
+
+US:
+	-PDFs
+Descripton:
+	-Convert html files to PDF files
+
+US:
+	-Difficulty
+Description:
+	-Option to choose difficulty - easy,medium ot hard
